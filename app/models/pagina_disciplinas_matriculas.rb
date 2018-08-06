@@ -1,0 +1,2 @@
+class PaginaDisciplinasMatriculadas < PaginaUTFPR
+end
