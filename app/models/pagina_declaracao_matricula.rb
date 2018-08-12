@@ -31,7 +31,6 @@ class PaginaDeclaracaoMatricula < PaginaUTFPR
       hash.estagio = tabela.css("tr")[6].css("td")[0].text
 
 
-      p hash
 
     #  p hash
       hash

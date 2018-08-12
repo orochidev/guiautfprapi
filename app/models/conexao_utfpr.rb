@@ -9,34 +9,43 @@ class ConexaoUTFPR
       self.cod_campus = campus
 
       configurar_conexao
-      dados = OpenStruct.new
-      dados.pagina_inicial = PaginaInicialUTFPR.new(self).extrair
-      self.curscodnr = dados.pagina_inicial.curscodnr
-      self.alcuordemnr = dados.pagina_inicial.alcuordemnr
-
-      dados.declaracao_matricula = PaginaDeclaracaoMatricula.new(self).extrairs
-      #self.ra = dados.pagina_inicial  =.curscodnr
-
-
     end
-    def logado?
-      teste = open("https://utfws.utfpr.edu.br/aluno03/sistema/mpmenu.inicio",
-      http_basic_authentication: [login,senha])
-      doc = Nokogiri::HTML(teste)
-      p doc.at("html").to_html
 
-      true
+    def get_dados
+      if is_conectado?
+        dados = OpenStruct.new
+        dados.pagina_inicial = PaginaInicialUTFPR.new(self).extrair
+        self.curscodnr = dados.pagina_inicial.curscodnr
+        self.alcuordemnr = dados.pagina_inicial.alcuordemnr
+
+        dados.declaracao_matricula = PaginaDeclaracaoMatricula.new(self).extrair
+        dados.disciplinas_matricladas = PaginaDisciplinasMatriculadas.new(self).extrair
+        dados.boletim = PaginaBoletim.new(self).extrair
+
+        #self.ra = dados.pagina_inicial  =.curscodnr
+        dados
+      end
     end
+
 
     def RA
       self.ra
     end
-    private
-    def conectar
 
+    private
+    def is_conectado?
+      status = nil
+      begin
+        open("https://utfws.utfpr.edu.br/aluno03/sistema/mpmenu.inicio",
+        http_basic_authentication: [self.login, self.senha]) do |f|
+          status = f.status[0]    #=> ["200", "OK"]
+        end
+      rescue OpenURI::HTTPError => e
+        status = e.io.status[0]
+      end
+      status == "200"
     end
     def configurar_conexao
       OpenSSL::SSL::SSLContext::DEFAULT_PARAMS[:ciphers] = "DES-CBC3-SHA"
-
     end
 end
