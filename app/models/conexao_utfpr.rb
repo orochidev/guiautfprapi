@@ -31,8 +31,6 @@ class ConexaoUTFPR
     def RA
       self.ra
     end
-
-    private
     def is_conectado?
       status = nil
       begin
@@ -45,6 +43,8 @@ class ConexaoUTFPR
       end
       status == "200"
     end
+    private
+
     def configurar_conexao
       OpenSSL::SSL::SSLContext::DEFAULT_PARAMS[:ciphers] = "DES-CBC3-SHA"
     end
