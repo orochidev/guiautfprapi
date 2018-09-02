@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: bin/rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/usr/app
+    ports:
+      - "3000:3000"
