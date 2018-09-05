@@ -14,12 +14,12 @@ class PaginaBoletim < PaginaUTFPR
 
       disciplina.codigo_turma = e.css("td")[2].text
       disciplina.faltas = e.css("td")[3].text
-      disciplina.media_parcial = e.css("td")[3].text
-      disciplina.aulas_dadas = e.css("td")[4].text
-      disciplina.cch_prevista = e.css("td")[5].text
-      disciplina.pct_frequencia = e.css("td")[6].text
-      disciplina.media_final = e.css("td")[7].text
-      disciplina.situacao = e.css("td")[8].text
+      disciplina.media_parcial = e.css("td")[4].text
+      disciplina.aulas_dadas = e.css("td")[5].text
+      disciplina.cch_prevista = e.css("td")[6].text
+      disciplina.pct_frequencia = e.css("td")[7].text
+      disciplina.media_final = e.css("td")[8].text
+      disciplina.situacao = e.css("td")[9].text
       disciplina
     end
 
