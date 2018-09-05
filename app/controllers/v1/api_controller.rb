@@ -1,8 +1,21 @@
+class OpenStruct
+  def as_json(options = nil)
+    @table.as_json(options)
+  end
+end
 module V1
 	class ApiController < ApplicationController
     before_action :api_authenticate
     include ActionController::HttpAuthentication::Basic::ControllerMethods
     include ActionController::HttpAuthentication::Token::ControllerMethods
+
+		def pretty_data
+			aluno = OpenStruct.new
+			aluno.nome = @current_data.pagina_inicial.nome
+
+			
+		end
+
   	protected
   	def api_authenticate
   		api_authenticate_by_login_password || render_unauthorized

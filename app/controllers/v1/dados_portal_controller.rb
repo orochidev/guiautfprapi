@@ -1,8 +1,4 @@
-class OpenStruct
-  def as_json(options = nil)
-    @table.as_json(options)
-  end
-end
+
 
 module V1
   class DadosPortalController < ApiController
