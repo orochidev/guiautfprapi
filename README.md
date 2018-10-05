@@ -1,12 +1,4 @@
-# GuiaUTFPR API 
-<<<<<<< HEAD
-Uma API criada por mim para formatar dados disponíveis no Portal do Aluno da UTFPR.
-
-Após clonar:
-
-bundle install
-
-=======
+# GuiaUTFPR API
 
 ## Sobre
 
@@ -25,7 +17,7 @@ Pretendo adicionar mais algumas rotas para facilitar o consumo das informações
 
 https://guiautfprapi.herokuapp.com/v1/disciplinas_matriculadas?campus=campo_mourao
 
-Espera um Basic HTTP Auth no cabeçalho com RA e senha do aluno. O parâmetro **campus** também espera o nome do campus ao qual o aluno pertence. Basta escrever o nome do campus e, caso haja espaço, separe por _ (underline). 
+Espera um Basic HTTP Auth no cabeçalho com RA e senha do aluno. O parâmetro **campus** também espera o nome do campus ao qual o aluno pertence. Basta escrever o nome do campus e, caso haja espaço, separe por _ (underline).
 
 Retorna:
 ```javascript
@@ -47,4 +39,3 @@ Retorna:
     ]
 }
 ```
->>>>>>> cb135366e4206d6e3ee550ba8f80b8596dbb3b8d
