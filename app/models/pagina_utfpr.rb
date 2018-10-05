@@ -14,4 +14,5 @@ class PaginaUTFPR
     page = open(page_url, http_basic_authentication: [self.login,self.senha])
     Nokogiri::HTML(page)
   end
+
 end
