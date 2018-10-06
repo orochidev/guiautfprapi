@@ -39,3 +39,94 @@ Retorna:
     ]
 }
 ```
+https://guiautfprapi.herokuapp.com/v1/dados_portal?campus=campo_mourao
+
+Espera um Basic HTTP Auth no cabeçalho com RA e senha do aluno. O parâmetro **campus** também espera o nome do campus ao qual o aluno pertence. Basta escrever o nome do campus e, caso haja espaço, separe por _ (underline).
+
+Retorna os dados de algumas páginas disponíveis no Portal do Aluno.
+```javascript
+
+{
+    "pagina_inicial": {
+        "RA": "",
+        "nome": "",
+        "nome_curso": "",
+        "situacao_curso": "",
+        "linha": "",
+        "curscodnr": "",
+        "tpcurcodnr": "",
+        "alcuordemnr": ""
+    },
+    "declaracao_matricula": {
+        "nome": "",
+        "ra": "",
+        "nome_curso": "",
+        "carga_horaria": "",
+        "duracao": "",
+        "regime_ensino": "",
+        "ingresso": "",
+        "periodo": "",
+        "semestre": "",
+        "turno": "",
+        "inicio_semestre": "",
+        "termino_semestre": "",
+        "dias_letivos": "",
+        "estagio": ""
+    },
+    "disciplinas_matricladas": [
+        {
+            "codigo": "M1",
+            "inicio": "07h30",
+            "termino": "08h20",
+            "aula_segunda": {
+                "codigo_disciplina": "",
+                "codigo_turma": "",
+                "sala": ""
+            },
+            "aula_terca":{
+                "codigo_disciplina": "",
+                "codigo_turma": "",
+                "sala": ""
+            },
+            "aula_quarta": {
+                "codigo_disciplina": "",
+                "codigo_turma": "",
+                "sala": ""
+            },
+            "aula_quinta": {
+                "codigo_disciplina": "",
+                "codigo_turma": "",
+                "sala": ""
+            },
+            "aula_sexta": {
+                "codigo_disciplina": "",
+                "codigo_turma": "",
+                "sala": ""
+            },
+            "aula_sabado": {
+                "codigo_disciplina": "",
+                "codigo_turma": "",
+                "sala": ""
+            }
+        }...
+       
+       
+    ],
+    "boletim": {
+        "disciplinas": [
+            {
+                "codigo": "",
+                "nome": "",
+                "codigo_turma": "",
+                "faltas": "",
+                "media_parcial": "",
+                "aulas_dadas": "",
+                "cch_prevista": "",
+                "pct_frequencia": "",
+                "media_final": "",
+                "situacao": ""
+            }...
+        ]
+    }
+}
+```
