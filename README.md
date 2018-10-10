@@ -5,7 +5,7 @@
 
 Uma API desenvolvida por [mim](http://www.victormatheus.com.br) na época que lancei o aplicativo **Guia UTFPR** há muito tempo atrás. Serve para fornecer os dados disponíveis no portal do aluno. A API acessa o portal com o login/senha informados, extrai todas as informações e fornece pra você todas elas em JSON que pode ser consumido por qualquer tipo de aplicação.
 
-Resolvi jogar o código aqui neste repositório para que posteriormente alguém possa utilizar para desenvolver algum app bacana. Atualmente a API está disponível e rodando em um plano free do Heroku e pode ser consumida através do link https://guiautfprapi.herokuapp.com/.
+Resolvi jogar o código aqui neste repositório para que posteriormente alguém possa utilizar para desenvolver algum app bacana. Atualmente a API está disponível e rodando em um plano free do Heroku e pode ser consumida através do link https://guiautfprapi.herokuapp.com/, mas nada impede você de subir sua própria instância.
 
 ## URL e versionamento
 
