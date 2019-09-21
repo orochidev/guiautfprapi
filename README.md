@@ -9,7 +9,7 @@ Resolvi jogar o código aqui neste repositório para que posteriormente alguém 
 
 ## URL e versionamento
 
-Como diria [Renata Vasconcelos](https://www.youtube.com/watch?v=B1tupT3LijM), a manutenção dada a este código é simplesmente **"Chocha, capenga, manca, anêmica, frágil e inconsistente"**.
+Como diria [Renata Vasconcelos](https://www.youtube.com/watch?v=VuhfI4oza_g), a manutenção dada a este código é simplesmente **"Chocha, capenga, manca, anêmica, frágil e inconsistente"**.
 Pretendo adicionar mais algumas rotas para facilitar o consumo das informações ainda nesta versão V1 ( https://guiautfprapi.herokuapp.com/v1 ), porém a intenção é que haja uma grande refatoração na migração para a V2, eliminando más práticas graves de desenvolvimento que foram se acumulando durante o tempo de existência deste código ( acredito que tem uns 2 anos que esse código não há alteraçoẽs neste código ~~porém funciona~~ ).
 
 
